@@ -1,42 +1,25 @@
+var x = prompt('ВВЕДИТЕ ВОЗВОДИМОЕ ЧИСЛО/INSERT');
 
-if (n == 0) {
-    result = 1;
+var n = prompt('ВВЕДИТЕ СТЕПЕНЬ/INSERT');
+
+if (n < 0) {
+  alert('Степень ' + n +
+    ' не поддерживается, введите целое число'
+  );
+
 } else {
-    var modn = n > 0 ? n : -1 * n;
-    for (var i = 1;  i < modn; i++) {
-        result *= x;
-   }
-    if (n < 0) {
-        result = 1 / result;
-    }
+  console.log( pow (x, n) ) ;
 }
 
 function pow(x, n) {
-  var result = x;
+  var result = 1;
 
-    for (var i = 1;  i < n; i++) {
+    for (var i = 0;  i < n; i++) {
     result *= x;
   }
 
   return result;
 }
-
-var x = prompt('ВВЕДИТЕ ВОЗВОДИМОЕ ЧИСЛО/INSERT');
-
-var n = prompt('ВВЕДИТЕ СТЕПЕНЬ/INSERT');
-
-if (x != parseInt(x)) {
-  alert('Число ' + x +
-    ' не поддерживается, введите целое число'
-  );
-}
-else if (n != parseInt(n)) {
-  alert('Степень ' + n +
-    ' не поддерживается, введите целую степень, '
-  );
-} else {
-    console.log( pow(x, n) );
-} 
 
 
 

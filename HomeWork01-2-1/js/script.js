@@ -1,18 +1,23 @@
 
 
 
-
 var userList = ['Петя', 'Вася', 'Олег', 'Толя', 'Андрей'];
 
 var userName = prompt('ВВЕДИТЕ ИМЯ ПОЛЬЗОВАТЕЛЯ/INSERT');
 
+for (var i = 0; i < 5; i++) 
 
-if (userList.indexOf(userName)>=0){
+if (userList[i] === userName) {
 
-alert(userName + ',вы успешно вошли!');
+alert(userName + ',вы успешно вошли!');break; 
 
 } else {
 
-alert(userName + '   ,ИМЯ ПOЛЬЗОВАТЕЛЯ ВВЕДЕНО НЕВЕРНО!')
+alert(userName + ',ИМЯ ПOЛЬЗОВАТЕЛЯ ВВЕДЕНО НЕВЕРНО!'+ userList[i] );
 
 }
+
+
+
+
+
